@@ -99,9 +99,9 @@ module.exports = function(options){
         return Promise.reject();
     }
 
-    NeighbourThreshold = options.NeighbourThreshold || 3;
-    MergeThreshold = options.MergeThreshold || 10;
-    NoiseThreshold = options.NoiseThreshold || 2;
+    NeighbourThreshold = options.neighbourThreshold || 3;
+    MergeThreshold = options.mergeThreshold || 10;
+    NoiseThreshold = options.noiseThreshold || 2;
 
     const outputPath = `${__dirname}/${uuid()}.jpg`
 
