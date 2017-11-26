@@ -11,9 +11,9 @@ const TMP_PATH = process.env.TMP_PATH || '/tmp';
 // Based on https://github.com/garyshort/chickens
 let Clusters = [];
 
-const NeighbourThreshold = 3;
-const MergeThreshold = 10;
-const NoiseThreshold = 2;
+let NeighbourThreshold = 3;
+let MergeThreshold = 10;
+let NoiseThreshold = 2;
 
 function EuclideanDistanceBetween(p1, p2){
     var a = p1[0] - p2[0]
@@ -99,15 +99,23 @@ module.exports = function(options){
         return Promise.reject();
     }
 
+    NeighbourThreshold = options.NeighbourThreshold || 3;
+    MergeThreshold = options.MergeThreshold || 10;
+    NoiseThreshold = options.NoiseThreshold || 2;
+
     const outputPath = `${__dirname}/${uuid()}.jpg`
 
     return new Promise( (resolve, reject) => {
         
-        gm(options.path)
-            .resize(128)
-            .channel("gray")
-            .negative()
-            .blackThreshold('50%')
+        let process = gm(options.path)
+            .resize(options.size || 128)
+            .channel("gray");
+            
+            if(options.invert !== false){
+                process = process.negative()
+            }
+
+            process = process.blackThreshold('50%')
             .whiteThreshold('50%')
             .write(outputPath, function (err) {
                 if (err) {
