@@ -1,0 +1,30 @@
+{
+  "name": "quick-cluster-counts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanmtracey/QuickBlobs.git"
+  },
+  "keywords": [
+    "blob-detection"
+  ],
+  "author": "Sean M. Tracey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanmtracey/QuickBlobs/issues"
+  },
+  "homepage": "https://github.com/seanmtracey/QuickBlobs#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "get-pixels": "^3.3.0",
+    "gm": "^1.23.0",
+    "image-size": "^0.6.1",
+    "uuid": "^3.1.0"
+  }
+}
