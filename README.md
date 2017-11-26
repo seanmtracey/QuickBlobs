@@ -38,3 +38,6 @@ This module was created to researchers in counting the number of cells in a micr
 ## Is it useful for anything else?
 Well, [Gary](https://twitter.com/garyshort) wrote the original algorithm to count the number of chickens in an image. I realised that the same algorithm could be used to count the number of cells in an image taken from a microscope. If you're looking to count bright dots in a dark space (stars in the sky, maybe?) then this might be useful for you.
 
+## Why 'quick'-cluster-counts
+
+It's called 'quick'-cluster-counts because I put it together quickly. It should not be taken as an advertisment for the modules speed 😅
