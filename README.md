@@ -8,10 +8,22 @@ A Node.js module that counts cluster of pixels in an image. Based on [Gary Short
 const quickClusterCounts = require('quick-cluster-counts');
 
 quickClusterCounts( { path : '/path/to/imageFile.jpg'} )
-    .then(numberOfClusters => console.log(numberOfClusters))
+    .then(results => {
+        console.log(results);
+    })
 ;
 
 ```
+
+### Properties
+
+**numberOfClusters**
+
+The total number of clusters identified
+
+**clusters**
+
+The identified clusters
 
 ## Dependencies
 

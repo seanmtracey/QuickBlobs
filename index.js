@@ -128,7 +128,10 @@ module.exports = function(options){
                             ClusterAllPoints(dimensions, pixels.data);
                             CullNoiseClusters(NoiseThreshold);
                             debug(`${Clusters.length} clusters`);
-                            resolve(Clusters.length);
+                            resolve({
+                                numberOfClusters : Clusters.length,
+                                clusters : Clusters
+                            });
                         }
                     })
 
