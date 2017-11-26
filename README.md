@@ -17,23 +17,23 @@ quickClusterCounts( { path : '/path/to/imageFile.jpg'} )
 
 ### Options (all optional unless otherwise stated)
 
-**path <STRING>[required]**
+**path (STRING) [required]**
 
 An absolute path to the file you wish to process.
 
-**invert <BOOLEAN>**
+**invert (BOOLEAN)**
 
 Should the image be inverted before processing? Advisable if image being processed has a light background with dark points.
 
-**neighbourThreshold <Number>**
+**neighbourThreshold (Number)**
 
 The maximum distance pixels can be apart in order to be considered neighbors.
 
-**mergeThreshold <Number>**
+**mergeThreshold (Number)**
 
 The maximum allowed distance clusters can be apart for them to be considered for merging.
 
-**noiseThreshold <Number>**
+**noiseThreshold (Number)**
 
 The mininum size a cluster needs lest it be ignored as noise.
 
